@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNews - Mis Favoritos</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+                EcoNews
+            </a>
+            <!-- Menú de enlaces -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center text-white gap-1" href="favoritos.html">
+                            Favoritos
+                            <span id="fav-count" class="badge bg-warning text-dark rounded-pill">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center text-white gap-1" href="gestion.html">
+                            Gestión (CRUD)
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center text-white gap-1" href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+
+        <section class="section active">
+            <h2 style="margin-bottom: 1.5rem;">Mis Noticias Favoritas</h2>
+            <div id="favorites-container" class="news-grid"></div>
+        </section>
+
+        <!-- MODAL DETALLE DE NOTICIA -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top" alt="Noticia" style="height: 200px; object-fit: cover;">
+
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-primary mb-2 align-self-start">Turismo</span>
+                    <h5 class="card-title">Rutas Turísticas Sostenibles</h5>
+                    <p class="card-text text-muted flex-grow-1">Descubre los mejores destinos ecológicos para visitar
+                        este año.</p>
+                    <button
+                        class="btn btn-danger mt-auto d-inline-flex align-items-center gap-2 justify-content-center ">
+                        Quitar de Favoritos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 EcoNews - Todos los derechos reservados.</p>
+            <small class="text-white-50 d-block">Prototipo con HTML, CSS, JavaScript, Bootstrap.</small>
+        </div>
+    </footer>
+
+    <script src="scritp_cards.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNews</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+                EcoNews
+            </a>
+            <!-- Menú de enlaces -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center text-white gap-1" href="favoritos.html">
+                            Favoritos
+                            <span id="fav-count" class="badge bg-warning text-dark rounded-pill">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center text-white gap-1" href="gestion.html">
+                            Gestión (CRUD)
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center text-white gap-1" href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <!-- Banner -->
+        <div class="bg-primary text-white text-center p-4 rounded mb-4">
+            <h1>Explora Noticias y Experiencias</h1>
+            <p>Descubre lo último en tecnología, educación, turismo y comercio con una experiencia interactiva.</p>
+            <button class="btn btn-warning" onclick="window.location.href='contacto.html'">
+                Contáctanos hoy
+            </button>
+        </div>
+
+        <!-- Título -->
+        <h2 class="mb-3">Noticias Destacadas</h2>
+
+        <!-- Grid de Noticias -->
+        <div id="news-container" class="row g-3">
+
+            <!--
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Noticia"
+                        style="height: 200px; object-fit: cover;">
+    
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary mb-2 align-self-start">Turismo</span>
+                        <h5 class="card-title">Rutas Turísticas Sostenibles</h5>
+                        <p class="card-text text-muted flex-grow-1">Descubre los mejores destinos ecológicos para visitar este año.</p>
+                        <button
+                            class="btn btn-outline-primary mt-auto d-inline-flex align-items-center gap-2 justify-content-center">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+                -->
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 EcoNews - Todos los derechos reservados.</p>
+            <small class="text-white-50 d-block">Prototipo con HTML, CSS, JavaScript, Bootstrap.</small>
+        </div>
+    </footer>
+
+    <!-- Modal para ver el detalle de la noticia -->
+    <div class="modal fade" id="modalNoticia" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="modal-category" class="badge bg-primary me-2">Categoría</span>
+                    <h5 class="modal-title fw-bold" id="modal-title">Título</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-image" src="" class="img-fluid rounded mb-3 w-100"
+                        style="max-height: 350px; object-fit: cover;" alt="Imagen de la noticia">
+                    <p id="modal-desc" class="fs-5 text-secondary"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scritp_cards.js"></script>
+
+</body>
+
+</html>
